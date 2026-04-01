@@ -1,0 +1,90 @@
+########################################
+# FILE CONFIGURATION
+########################################
+
+[Files]
+# Path to input dataset
+input_file = path/to/input.xlsx
+
+# Worksheet name within the file
+input_worksheet = Sheet1
+
+# Output file path
+output_file = path/to/output.xlsx
+
+
+########################################
+# COLUMN CONFIGURATION
+########################################
+
+[Columns]
+# Primary columns used for row-wise evaluation
+a_column = variable_name    # modify to fit your needs
+b_column = description      # modify to fit your needs
+
+# (Optional) Add more columns if needed later
+# c_column = form_name      # modify to fit your needs
+
+
+########################################
+# INSTRUCTION / PROMPT CONFIGURATION
+########################################
+
+[Instructions]
+# Prompt identifiers or references
+# These can map to stored prompts, files, or inline strings
+prompt1 = refine_label_prompt
+prompt2 = classification_prompt
+prompt3 = optional_prompt
+
+# NOTE:
+# - Prompts should be edited here to control model behavior
+# - Keep instructions structured and explicit
+# - Prefer requesting JSON outputs with fixed keys
+
+
+########################################
+# MODEL CONFIGURATION
+########################################
+
+[Model]
+# Model to use for evaluation
+model_name = gpt-4.1-mini       # modify to fit your needs
+
+# Sampling parameters           # modify to fit your needs
+temperature = 0.0               # modify to fit your needs
+max_tokens = 1000               # modify to fit your needs
+
+
+########################################
+# ROW PROCESSING CONFIGURATION
+########################################
+
+[Processing]
+# Number of rows to process (useful for testing)
+row_limit =                 # modify to fit your needs
+
+# Retry settings
+max_retries = 3             # modify to fit your needs
+
+
+########################################
+# OUTPUT CONFIGURATION
+########################################
+
+[Output]
+# Expected structured output fields from model
+output_label = output_label                 # modify to fit your needs
+output_confidence = output_confidence       # modify to fit your needs
+output_rationale = output_rationale         # modify to fit your needs
+
+# Include raw response column
+include_raw_response = True                 # modify to fit your needs
+
+
+########################################
+# OPTIONAL: HINT / DERIVED FIELD CONFIG
+########################################
+
+[Hints]
+# Toggle use of derived helpers (if implemented)
