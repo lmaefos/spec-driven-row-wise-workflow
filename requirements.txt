@@ -1,0 +1,22 @@
+# Core data + notebook
+pandas>=2.0
+openpyxl>=3.1
+numpy>=1.24
+
+# LLM client (OpenAI-compatible)
+openai>=1.30
+
+# HTTP requests + retry logic (SRI Name Resolution + SapBERT APIs)
+requests>=2.31
+
+# Environment variable management
+python-dotenv>=1.0
+
+# BioBERT local embeddings
+# torch install depends on your platform — see https://pytorch.org/get-started/locally/
+# CPU-only (smaller, works on most sandboxes):
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+# GPU (if CUDA is available):
+#   pip install torch
+torch>=2.0
+transformers>=4.35
